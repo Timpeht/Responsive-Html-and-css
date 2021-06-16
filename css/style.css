@@ -1,0 +1,216 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-size: 15px;
+    line-height:1.5; /*space between each line*/
+    /*this works too: font: 15px/1.5 'Lucida Sans, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode'; in one line*/
+    padding: 0px;
+    margin: 0;
+    background-color: rgb(229, 233, 235);
+}
+/* Global */
+.container {
+    width:80%;
+    margin:auto;
+    overflow:hidden; /*to hid anything that's outside a div*/
+}
+
+ul {
+    margin:0;
+    padding:0;
+}
+
+.button {
+    height:38;
+    background: wheat;
+    border: 0;
+    padding-left: 20;
+    padding-right: 20px;
+    color: black;
+}
+
+.dark {
+    padding: 15px;
+    background: #4b43b6;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*Header*/
+header {
+    background:#4b43b6;
+    color:white;
+    padding-top: 30px;
+    min-height: 70px; /* minimum adjustable height for when the text is smaller */
+    border-bottom: floralwhite 3px solid; /*color, size and style */
+}
+
+/* links */
+header a {
+    color: white;
+    text-decoration: none; /* underline */
+    text-transform: uppercase;/* uppercase */
+    font-size: 16px;
+}
+
+header li {
+    float:left; /* horizontal list */
+    display: inline; /* same line */
+    padding:0 20px 0 20px;
+}
+
+header #logo {
+    float: left;
+}
+
+header #logo h1 {
+    margin: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a { 
+    color:wheat;
+    font-weight:  bold; 
+} 
+/* the 2nd header with .current is because I want another property for this style */
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* Showcase */
+#showcase {
+    min-height:400px;
+    background:url('../img/backgrnd_5.jpg') no-repeat 0 -400px; /* don't use background-image, the numbers are the horizontal and vertical access */
+    text-align: center;
+    color:white; 
+}
+
+#showcase h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
+}
+
+/* Newsletter */
+#newsletter {
+    padding: 15px;
+    color: white;
+    background-color: #4b43b6;
+}
+
+#newsletter h1 {
+    float: left;
+}
+
+#newsletter form {
+    float: right;
+    margin-top: 15px;
+}
+
+#newsletter input[type="email"] {
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+/* Items */
+#items {
+    margin-top: 20px;
+}
+
+#items .item {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+#items .item img {
+    width: 90px;
+}
+
+/* Sidebar */
+aside#sidebar {
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+
+aside#sidebar .quote input,  aside#sidebar .quote textarea {
+    width: 90%;
+    padding: 5px;
+}
+
+/* Main-col */
+article#main-col {
+    float: left;
+    width: 65%;
+}
+
+/* Services */
+ul#services li {
+    float: left;
+    width: 65%;
+    list-style: none;
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+
+footer {
+    padding: 20px;
+    color: black;
+    background-color: #4b43b6;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width:768px) {   /* Mobile screen size */
+    header #logo,
+    header nav,
+    header li,
+    #newsletter h1,
+    #newsletter form,
+    #items .item,
+    article#main-col,
+    aside#sidebar,
+    ul#services li {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+
+    #showcase h1 {
+        margin-top: 40px;
+    }
+    #newsletter button, .quote button, .quote input, .quote textarea {
+        display: block;
+        width: 100%;
+    }
+
+    #newsletter form input[type="email"] {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}  
+
+
+    
+    
+    
+    /* media query is done to remove the floats and make them stack on mobile screen, I guess */
+    /*  body { dispay: none; } takes everything off the mobile screen size */
